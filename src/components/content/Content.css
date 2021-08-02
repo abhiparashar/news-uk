@@ -14,7 +14,7 @@
 .card{
     display: flex;
     flex-direction: column;
-    height: 500px;
+    height: 450px;
     width: 400px;
     margin-left: 40px;
     margin-bottom: 20px;
@@ -28,4 +28,22 @@
    height: 300px;
    border-radius: 8px 8px 0px 0px;
    object-fit: cover;
+}
+.published{
+    display: flex;
+    padding-top: 5px;
+    padding-left: 10px;
+    font-weight: 400;
+    justify-content: center;
+}
+.title{
+    padding: 10px 0px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.author{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: gray;
 }

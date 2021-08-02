@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import  { Redirect, useHistory } from 'react-router-dom'
 import "./Content.css";
 
 const Content = () => {
+  const history = useHistory();
   const [articles, setArticles] = useState([]);
   useEffect(() => {
     axios
@@ -12,20 +14,19 @@ const Content = () => {
       .then((res) => setArticles(res.data.articles))
       .catch((err) => console.log(err));
   }, []);
+
   const resultList = articles.map((article) => {
     return (
       <div className="cards">
-        <div className="card">
-          <img
-            src={article.urlToImage}
-            alt="../../assets/nbc-social-default.png"
-          />
-          <div className="published">{article.publishedAt}</div>
-          <div className="title">{article.title}</div>
-          <div className="description">{article.description}</div>
-          <div className="author">{article.author}</div>
-          <div className="seemore">{article.url}</div>
-        </div>
+          <div className="card">
+            <img
+              src={article.urlToImage}
+              alt=""
+            />
+            <div className="title">{article.title}</div>
+            <div className="author">{article.author}</div>
+            <a href={article.url} target="_blank" style={{textDecoration:"none",color:"dark-gray"}}>Read More...</a>
+          </div>
       </div>
     );
   });
