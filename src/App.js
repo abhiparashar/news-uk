@@ -9,13 +9,13 @@ function App() {
     <div className="app">
       <BrowserRouter>
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/signin">
             <SignInPage />
           </Route>
           <Route exact path="/signup">
             <SignUpPage />
           </Route>
-          <Route exact path="/news-uk.com">
+          <Route exact path="/">
             <HomePage />
           </Route>
         </Switch>

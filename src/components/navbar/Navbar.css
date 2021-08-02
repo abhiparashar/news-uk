@@ -1,0 +1,23 @@
+.navbar{
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+.navbar img{
+    height: 200px;
+    width: 70px;
+    object-fit: contain;
+    padding-left: 50px;
+}
+.navbar a{
+    height: fit-content;
+    width: 70px;
+    padding-right: 50px;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    background-color: yellow;
+}
