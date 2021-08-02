@@ -1,23 +1,49 @@
-.navbar{
-    height: 10vh;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
+.navbar {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
 }
-.navbar img{
-    height: 100px;
-    width: 200px;
-    object-fit: contain;
-    padding-left: 50px;
-    cursor: pointer;
+.navbar img {
+  height: 100px;
+  width: 200px;
+  object-fit: contain;
+  padding-left: 50px;
+  cursor: pointer;
 }
-.navbar a{
-    height: fit-content;
-    width: 70px;
-    padding-right: 50px;
-    font-size: 20px;
-    font-weight: 400;
-    cursor: pointer;
+.navbar a {
+  height: fit-content;
+  width: 70px;
+  padding-right: 50px;
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search input {
+  width: 200px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid gray;
+}
+.search label {
+  height: 30px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
