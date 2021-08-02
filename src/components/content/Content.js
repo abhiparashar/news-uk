@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import image from '../../assets/nbc-social-default.png'
+import image from "../../assets/nbc-social-default.png";
 import "./Content.css";
 
-const Content = ({resultProp}) => {
+const Content = ({ resultProp }) => {
   const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     axios
       .get(
@@ -13,19 +14,33 @@ const Content = ({resultProp}) => {
       .then((res) => setArticles(res.data.articles))
       .catch((err) => console.log(err));
   }, []);
-  console.log(articles);
+
+  useEffect(() => {
+    setLoading(true);
+    setArticles(resultProp);
+  }, [resultProp]);
+
   const resultList = articles.map((article) => {
     return (
       <div className="cards">
-          <div className="card">
-            <img
-              src={article.urlToImage===null?image:article.urlToImage}
-              alt=""
-            />
-            <div className="title">{article.title}</div>
-            <div className="author">{article.author===null ? 'Anonymous' :article.author}</div>
-            <a href={article.url} target="_blank" rel="noreferrer" style={{textDecoration:"none",color:"dark-gray"}}>Read More...</a>
+        <div className="card">
+          <img
+            src={article.urlToImage === null ? image : article.urlToImage}
+            alt=""
+          />
+          <div className="title">{article.title}</div>
+          <div className="author">
+            {article.author === null ? "Anonymous" : article.author}
           </div>
+          <a
+            href={article.url}
+            target="_blank"
+            rel="noreferrer"
+            style={{ textDecoration: "none", color: "dark-gray" }}
+          >
+            Read More...
+          </a>
+        </div>
       </div>
     );
   });

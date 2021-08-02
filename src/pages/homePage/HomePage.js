@@ -3,6 +3,7 @@ import axios from 'axios'
 import Footer from '../../components/footer/Footer'
 import Navbar from '../../components/navbar/Navbar'
 import Content from '../../components/content/Content'
+
 const HomePage = () => {
     const [result, setResult] = useState([])
     const getDta = (term)=>{
@@ -13,7 +14,6 @@ const HomePage = () => {
         .then((res) => setResult(res.data.articles))
         .catch((err) => console.log(err));
     }
-    console.log(result);
     return (
         <div className="homepage">
             <Navbar searchTerm={getDta}/>
