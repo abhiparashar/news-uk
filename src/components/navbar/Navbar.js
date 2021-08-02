@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import image from "../../assets/download.png";
+import Logout from "../logout/Logout";
 
 const Navbar = ({searchTerm}) => {
   const [term, setTerm] = useState("");
@@ -25,9 +26,7 @@ const Navbar = ({searchTerm}) => {
           />
         </form>
       </div>
-      <Link to="/logout" style={{ textDecoration: "none" }}>
-        <a href="/logout">Logout</a>
-      </Link>
+      <Logout/>
     </div>
   );
 };
