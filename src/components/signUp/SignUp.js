@@ -1,22 +1,27 @@
 import axios from "axios";
 import React, { useState } from "react";
-import {useHistory} from "react-router-dom"
-import "./SignUp.css"
+import { useHistory } from "react-router-dom";
+import "./SignUp.css";
 const SignUp = () => {
-  const history = useHistory()
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const submitHandler = (e) => {
-    e.preventDefault();
-    const data = {
-      name,
-      email,
-      password,
-    };
-    axios.post("http://localhost:5000/api/signup",data).then(console.log('sent successfully')).catch(err=>console.log(err))
-  };
-  history.push("/")
+  const history = useHistory()
+  const submitHandler = async(e) =>{
+    e.preventDefault()
+    try {
+      const config = {
+        header:{
+          "Content-type":"application/json"
+        }
+      }
+      const {data} = await axios.post("http://localhost:5000/api/signup",{name,email,password},config)
+      localStorage.setItem('userinfo',JSON.stringify(data))
+      history.push("/")
+    } catch (error) {
+      console.log(error);
+    }
+}
   return (
     <>
       <form className="form" onSubmit={submitHandler}>
