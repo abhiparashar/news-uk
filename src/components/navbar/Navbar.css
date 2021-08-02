@@ -1,16 +1,17 @@
 .navbar{
-    height: 15vh;
+    height: 10vh;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid gray;
+    background-color: white;
 }
 .navbar img{
-    height: 200px;
-    width: 70px;
+    height: 100px;
+    width: 200px;
     object-fit: contain;
     padding-left: 50px;
+    cursor: pointer;
 }
 .navbar a{
     height: fit-content;
@@ -19,5 +20,4 @@
     font-size: 20px;
     font-weight: 400;
     cursor: pointer;
-    background-color: yellow;
 }
