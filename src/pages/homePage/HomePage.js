@@ -4,7 +4,7 @@ import Navbar from '../../components/navbar/Navbar'
 import Content from '../../components/content/Content'
 const HomePage = () => {
     return (
-        <div>
+        <div className="homepage">
             <Navbar/>
             <Content/>
             <Footer/>
