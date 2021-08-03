@@ -7,13 +7,13 @@
   width: 1440px;
   object-fit: cover;
   overflow: hidden;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .form {
   position: absolute;
-  top: 25%;
-  left: 40%;
+  top: 15%;
+  left: 35%;
   z-index: 1000;
   display: flex;
   flex-direction: column;
