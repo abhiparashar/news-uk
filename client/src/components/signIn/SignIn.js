@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory,Link } from "react-router-dom";
 import image from "../../assets/oliver-niblett-wh-7GeXxItI-unsplash.jpg";
 import "./SignIn.css";
 const SignIn = () => {
@@ -48,6 +48,9 @@ const SignIn = () => {
           <button className="btn" type="submit">
             Submit
           </button>
+          <div className="paragraph">
+            <p>If new user Please <Link to="/signup" style={{textDecoration:"none"}}>Sign Up</Link></p>
+          </div>
         </form>
         <img src={image} alt="" />
       </div>

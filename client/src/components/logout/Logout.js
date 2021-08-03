@@ -11,7 +11,7 @@ const Logout = () => {
     }
     return (
         <div className="logout">
-            <a onClick={submitHandler}>Logout</a>
+            <a href="/signin" onClick={submitHandler}>Logout</a>
         </div>
     )
 }
