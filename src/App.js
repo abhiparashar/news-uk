@@ -3,6 +3,8 @@ import "./App.css";
 import SignInPage from "./pages/SigninPage/SignInPage";
 import SignUpPage from "./pages/signupPage/SignUpPage";
 import HomePage from "./pages/homePage/HomePage";
+import PrivateRoute from "./components/privateroutes/privateroutes";
+
 
 function App() {
   return (
@@ -15,9 +17,9 @@ function App() {
           <Route exact path="/signup">
             <SignUpPage />
           </Route>
-          <Route exact path="/">
+          <PrivateRoute exact path="/">
             <HomePage />
-          </Route>
+          </PrivateRoute>
         </Switch>
       </BrowserRouter>
     </div>

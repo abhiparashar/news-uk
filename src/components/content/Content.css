@@ -5,6 +5,7 @@
     height: calc(100-(40vh));
     color: black;
     background-color: #F3F2EE;
+    justify-content: center;
 }
 .cards{
     display: flex;

@@ -30,6 +30,7 @@ const SignIn = () => {
     <>
       <div className="signin">
         <form className="form" onSubmit={submitHandler}>
+          <label className="label-main">Sign In</label>
           <label className="label">Email</label>
           <input
             type="email"

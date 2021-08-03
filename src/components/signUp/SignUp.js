@@ -31,6 +31,7 @@ const SignUp = () => {
     <>
       <div className="signup">
         <form className="form" onSubmit={submitHandler}>
+          <label className="label-main">Sign Up</label>
           <label className="label">Name</label>
           <input
             type="name"

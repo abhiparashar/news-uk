@@ -19,12 +19,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid blue;
+  border: 2px solid black;
   padding: 80px 30px;
+}
+.form .label-main{
+  margin-bottom: 50px;
+  font-size: 30px;
+  font-weight: 900;
 }
 .form .label {
   color: black;
-  font-weight: 900;
+  font-weight: 800;
   font-size: 25px;
 }
 .form input {
