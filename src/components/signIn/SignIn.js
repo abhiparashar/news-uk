@@ -30,7 +30,7 @@ const SignIn = () => {
     <>
       <div className="signin">
         <form className="form" onSubmit={submitHandler}>
-          <label>Email</label>
+          <label className="label">Email</label>
           <input
             type="email"
             placeholder="Type your email here"

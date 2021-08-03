@@ -10,8 +10,8 @@ const Logout = () => {
         history.push('/signin')
     }
     return (
-        <div>
-            <button onClick={submitHandler}>Logout</button>
+        <div className="logout">
+            <a onClick={submitHandler}>Logout</a>
         </div>
     )
 }
