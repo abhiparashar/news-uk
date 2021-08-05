@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useHistory,Link } from "react-router-dom";
+import { toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import image from "../../assets/oliver-niblett-wh-7GeXxItI-unsplash.jpg";
 import "./SignUp.css";
 const SignUp = () => {
@@ -22,8 +24,10 @@ const SignUp = () => {
         config
       );
       localStorage.setItem("userinfo", JSON.stringify(data));
+      toast.success("SignUp successful!!")
       history.push("/");
     } catch (error) {
+      toast.error("Credentials already taken")
       console.log(error);
     }
   };

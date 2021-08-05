@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useHistory,Link } from "react-router-dom";
+import { toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import image from "../../assets/oliver-niblett-wh-7GeXxItI-unsplash.jpg";
 import "./SignIn.css";
 const SignIn = () => {
@@ -21,8 +23,10 @@ const SignIn = () => {
         config
       );
       localStorage.setItem("userinfo", JSON.stringify(data));
+      toast.success("SignIn successful!!")
       history.push("/");
     } catch (error) {
+      toast.error("Invalid credentials")
       console.log(error);
     }
   };
