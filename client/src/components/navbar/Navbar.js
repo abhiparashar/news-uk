@@ -4,12 +4,12 @@ import "./Navbar.css";
 import image from "../../assets/download.png";
 import Logout from "../logout/Logout";
 
-const Navbar = ({searchTerm}) => {
+const Navbar = ({ searchTerm }) => {
   const [term, setTerm] = useState("");
   const clickHandler = (e) => {
     e.preventDefault();
-    searchTerm(term)
-    setTerm("")
+    searchTerm(term);
+    setTerm("");
   };
   return (
     <div className="navbar">
@@ -26,7 +26,7 @@ const Navbar = ({searchTerm}) => {
           />
         </form>
       </div>
-      <Logout/>
+      <Logout />
     </div>
   );
 };

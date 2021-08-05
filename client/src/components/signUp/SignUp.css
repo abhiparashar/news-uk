@@ -22,7 +22,7 @@
   border: 2px solid black;
   padding: 80px 30px;
 }
-.form .label-main{
+.form .label-main {
   margin-bottom: 50px;
   font-size: 30px;
   font-weight: 900;
@@ -61,7 +61,7 @@
   border-radius: 5px;
   outline: none;
 }
-.form .paragraph{
+.form .paragraph {
   margin-top: 25px;
   font-size: 20px;
 }

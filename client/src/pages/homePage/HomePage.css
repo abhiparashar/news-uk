@@ -1,5 +1,5 @@
-.homepage{
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+.homepage {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }

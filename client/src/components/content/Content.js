@@ -14,9 +14,9 @@ const Content = ({ resultProp }) => {
       )
       .then((res) => setArticles(res.data.articles))
       .catch((err) => console.log(err));
-      setTimeout(() => {
-        setLoading(false)
-      }, 1000);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
   }, []);
 
   useEffect(() => {
