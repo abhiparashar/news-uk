@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { useHistory,Link } from "react-router-dom";
-import { toast} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { useHistory, Link } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import image from "../../assets/oliver-niblett-wh-7GeXxItI-unsplash.jpg";
 import "./SignUp.css";
 const SignUp = () => {
@@ -24,10 +24,10 @@ const SignUp = () => {
         config
       );
       localStorage.setItem("userinfo", JSON.stringify(data));
-      toast.success(`Hey ${name}, Welcome to News Live`)
+      toast.success(`Hey ${name}, Welcome to News Live`);
       history.push("/");
     } catch (error) {
-      toast.error("Credentials already taken")
+      toast.error("Credentials already taken");
       console.log(error);
     }
   };
@@ -61,7 +61,12 @@ const SignUp = () => {
             Submit
           </button>
           <div className="paragraph">
-            <p>If already a user Please <Link to="/signin" style={{textDecoration:"none"}}>Sign In</Link></p>
+            <p>
+              If already a user Please{" "}
+              <Link to="/signin" style={{ textDecoration: "none" }}>
+                Sign In
+              </Link>
+            </p>
           </div>
         </form>
         <img src={image} alt="" />

@@ -2,7 +2,10 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  height: calc(100- (15vh));
+  min-height: calc(100vh - 200px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: black;
   background-color: #f3f2ee;
   justify-content: center;

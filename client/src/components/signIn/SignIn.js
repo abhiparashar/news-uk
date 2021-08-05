@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { useHistory,Link } from "react-router-dom";
-import { toast} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { useHistory, Link } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import image from "../../assets/oliver-niblett-wh-7GeXxItI-unsplash.jpg";
 import "./SignIn.css";
 const SignIn = () => {
@@ -23,10 +23,10 @@ const SignIn = () => {
         config
       );
       localStorage.setItem("userinfo", JSON.stringify(data));
-      toast.success("SignIn successful!!")
+      toast.success("SignIn successful!!");
       history.push("/");
     } catch (error) {
-      toast.error("Invalid credentials")
+      toast.error("Invalid credentials");
       console.log(error);
     }
   };
@@ -53,7 +53,12 @@ const SignIn = () => {
             Submit
           </button>
           <div className="paragraph">
-            <p>If new user Please <Link to="/signup" style={{textDecoration:"none"}}>Sign Up</Link></p>
+            <p>
+              If new user Please{" "}
+              <Link to="/signup" style={{ textDecoration: "none" }}>
+                Sign Up
+              </Link>
+            </p>
           </div>
         </form>
         <img src={image} alt="" />
