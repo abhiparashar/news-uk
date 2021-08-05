@@ -16,7 +16,7 @@ const Content = ({ resultProp }) => {
       .catch((err) => console.log(err));
       setTimeout(() => {
         setLoading(false)
-      }, 1000);
+      }, 2000);
   }, []);
 
   useEffect(() => {
@@ -54,7 +54,7 @@ const Content = ({ resultProp }) => {
   return (
     <div className="content">
       {loading ? (
-        <Loader type="Circles" color="#00BFFF" height={100} width={100} />
+        <Loader type="Circles" color="black" height={100} width={100} />
       ) : (
         resultList
       )}
