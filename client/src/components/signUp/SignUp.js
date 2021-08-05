@@ -24,7 +24,7 @@ const SignUp = () => {
         config
       );
       localStorage.setItem("userinfo", JSON.stringify(data));
-      toast.success("SignUp successful!!")
+      toast.success(`Hey ${name}, Welcome to News Live`)
       history.push("/");
     } catch (error) {
       toast.error("Credentials already taken")
